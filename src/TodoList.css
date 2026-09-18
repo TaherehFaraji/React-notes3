@@ -1,0 +1,101 @@
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 16px;
+  margin-bottom: 10px;
+
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  transition: 0.2s;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.todo-text {
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+
+  transition: color 0.2s;
+}
+
+.todo-text:hover {
+  color: #e88ca4;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  color: #ef4444;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.delete-btn:hover {
+  color: #dc2626;
+}
+
+.todo-item:has(.completed) {
+  background: #f3f4f6;
+  opacity: 0.7;
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  color: #ef4444;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.edit-btn {
+  border: none;
+  background: transparent;
+  color: #8a1f4b;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.edit-btn:hover {
+  background: #eef2ff;
+  color: #e88ca4;
+}
+
+.edit-btn:active {
+  transform: scale(0.95);
+}

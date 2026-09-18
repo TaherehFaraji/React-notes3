@@ -1,0 +1,41 @@
+.todo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 20px;
+  padding-top: 15px;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.items-left {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.clear-btn {
+  border: none;
+  background: transparent;
+
+  color: #6b7280;
+  font-size: 14px;
+
+  cursor: pointer;
+  padding: 6px 8px;
+
+  transition: 0.2s;
+}
+
+.clear-btn:hover {
+  color: #ef4444;
+}
+
+@media (max-width: 400px) {
+  .todo-footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}

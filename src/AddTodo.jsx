@@ -1,5 +1,6 @@
 import { useState, useContext } from 'react'
 import TodoContext from './TodoContext'
+import './AddTodo.css'
 
 function AddTodo() {
   const [text, setText] = useState('')
@@ -14,9 +15,9 @@ function AddTodo() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input value={text} onChange={e => setText(e.target.value)} placeholder="Add todo..." />
-      <button type="submit">Add</button>
+    <form onSubmit={handleSubmit} className="todo-form">
+      <input value={text} onChange={e => setText(e.target.value)} placeholder="Add todo..." className="todo-input" />
+      <button type="submit" className="add-btn">Add</button>
     </form>
   )
 }

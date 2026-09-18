@@ -15,6 +15,10 @@ function todoReducer(state, action) {
       return state.filter(todo => todo.id !== action.payload)
     case 'CLEAR_COMPLETED':
       return state.filter(todo => !todo.completed)
+    case 'EDIT_TODO':
+      return state.map(todo => 
+        todo.id === action.payload.id ? { ...todo, text: action.payload.text } : todo 
+      )
     default:
       return state
   }

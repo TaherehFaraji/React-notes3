@@ -7,10 +7,12 @@ import './App.css'
 function App() {
   return (
     <TodoProvider>
-      <h1>Todo with Context + Reducer</h1>
-      <AddTodo />
-      <TodoList />
-      <TodoFooter />
+      <div className="todo-container">
+        <h1>Todo List</h1>
+        <AddTodo />
+        <TodoList />
+        <TodoFooter />
+      </div>
     </TodoProvider>
   )
 }
