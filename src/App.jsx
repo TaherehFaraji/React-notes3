@@ -7,6 +7,7 @@ import ExpensiveChild from './ExpensiveChild'
 import SortedList from './SortedList'
 import Counter from './Counter'
 import ProductList from './ProductList'
+import CartProvider from "./CartProvider";
 
 function App() {
   const items = [
@@ -16,7 +17,7 @@ function App() {
     'Mango',
     'Grape'
   ]
-  
+
   return (
     // <TodoProvider>
     //   <div className="todo-container">
@@ -28,8 +29,10 @@ function App() {
     // </TodoProvider>
     // <ExpensiveChild />
     // <Counter />
-    < SortedList items={items} />
-
+    // < SortedList items={items} />
+    <CartProvider>
+      <ProductList />
+    </CartProvider>
   )
 }
 export default App
