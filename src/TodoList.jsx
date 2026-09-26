@@ -4,7 +4,8 @@ import './TodoList.css'
 import TodoEdit from './TodoEdit'
 
 function TodoList() {
-  const { todos, dispatch } = useContext(TodoContext)
+  const { state, dispatch } = useContext(TodoContext)
+  const { todos } = state
   const [editingId, setEditingId] = useState(null)
 
   const handleEdit = (id) => {

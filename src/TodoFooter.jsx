@@ -3,7 +3,8 @@ import TodoContext from './TodoContext'
 import './TodoFooter.css'
 
 function TodoFooter() {
-  const { todos, dispatch } = useContext(TodoContext)
+  const { state, dispatch } = useContext(TodoContext)
+  const { todos } = state
   const remaining = todos.filter(t => !t.completed).length
 
   return (

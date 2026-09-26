@@ -99,3 +99,28 @@
 .edit-btn:active {
   transform: scale(0.95);
 }
+
+.undo-btn {
+  border: none;
+  background: #8a1f4b;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.25);
+}
+
+.undo-btn:hover {
+  background: #f2b8c6;
+}
+
+.undo-btn:disabled {
+  background: #d1d5db;
+  color: #888;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}

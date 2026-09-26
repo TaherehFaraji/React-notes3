@@ -19,20 +19,20 @@ function App() {
   ]
 
   return (
-    // <TodoProvider>
-    //   <div className="todo-container">
-    //     <h1>Todo List</h1>
-    //     <AddTodo />
-    //     <TodoList />
-    //     <TodoFooter />
-    //   </div>
-    // </TodoProvider>
+    <TodoProvider>
+      <div className="todo-container">
+        <h1>Todo List</h1>
+        <AddTodo />
+        <TodoList />
+        <TodoFooter />
+      </div>
+    </TodoProvider>
     // <ExpensiveChild />
     // <Counter />
     // < SortedList items={items} />
-    <CartProvider>
-      <ProductList />
-    </CartProvider>
+    // <CartProvider>
+    //   <ProductList />
+    // </CartProvider>
   )
 }
 export default App

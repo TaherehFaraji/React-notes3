@@ -4,7 +4,7 @@ import './AddTodo.css'
 
 function AddTodo() {
   const [text, setText] = useState('')
-  const { dispatch } = useContext(TodoContext)
+  const { state, dispatch } = useContext(TodoContext)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -18,6 +18,12 @@ function AddTodo() {
     <form onSubmit={handleSubmit} className="todo-form">
       <input value={text} onChange={e => setText(e.target.value)} placeholder="Add todo..." className="todo-input" />
       <button type="submit" className="add-btn">Add</button>
+      <button
+        className="undo-btn"
+        onClick={() => dispatch({ type: 'UNDO' })}
+        disabled={state.history.length === 0}>
+        Undo
+      </button>
     </form>
   )
 }
