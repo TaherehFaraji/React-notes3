@@ -19,13 +19,13 @@
 //   ]
 
 //   return (
-//     // <TodoProvider>
-//     //   <div className="todo-container">
-//     //     <h1>Todo List</h1>
-//     //     <AddTodo />
-//     //     <TodoList />
-//     //     <TodoFooter />
-//     //   </div>
+//     <TodoProvider>
+//       <div className="todo-container">
+//         <h1>Todo List</h1>
+//         <AddTodo />
+//         <TodoList />
+//         <TodoFooter />
+//       </div>
 //     </TodoProvider>
 //     // <ExpensiveChild />
 //     // <Counter />
@@ -41,6 +41,9 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './Navbar'
 import LoginButton from './LoginButton'
+import PostsList from './pages/PostsList'
+import PostDetail from './pages/PostDetail'
+import ProductsPage from './pages/ProductsPage'
 
 function Home() {
   return <h2>Home Page</h2>
@@ -57,15 +60,18 @@ function Contact() {
 function App() {
   return (
 
-      // {/* <h1>My Website</h1>
-      // <Navbar />
-      // <Routes>
-      //   <Route path="/" element={<Home />} />
-      //   <Route path="/about" element={<About />} />
-      //   <Route path="/contact" element={<Contact />} />
-      // </Routes> */}
-      <LoginButton />
-      )
+    // {/* <h1>My Website</h1>
+    // <Navbar />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      {/* <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} /> */}
+      <Route path="/posts" element={<PostsList />} />
+      <Route path="/posts/:postId" element={<PostDetail />} />
+      <Route path='/productspage' element={<ProductsPage />}></Route> 
+    </Routes>
+    // <LoginButton />
+  )
 }
 
-      export default App
+export default App
