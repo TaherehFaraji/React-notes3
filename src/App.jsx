@@ -38,40 +38,77 @@
 // export default App
 
 
+// import { Routes, Route } from 'react-router-dom'
+// import Navbar from './Navbar'
+// import LoginButton from './LoginButton'
+// import PostsList from './pages/PostsList'
+// import PostDetail from './pages/PostDetail'
+// import ProductsPage from './pages/ProductsPage'
+// import DashboardLayout from './layout/DashboardLayout'
+
+// function Home() {
+//   return <h2>Home Page</h2>
+// }
+
+// function About() {
+//   return <h2>About Us</h2>
+// }
+
+// function Contact() {
+//   return <h2>Contact Page</h2>
+// }
+
+// function App() {
+//   return (
+
+//     // {/* <h1>My Website</h1>
+//     // <Navbar />
+//     <Routes>
+//       <Route path="/" element={<Home />} />
+//       {/* <Route path="/about" element={<About />} />
+//       <Route path="/contact" element={<Contact />} /> */}
+//       <Route path="/posts" element={<PostsList />} />
+//       <Route path="/posts/:postId" element={<PostDetail />} />
+//       <Route path='/productspage' element={<ProductsPage />}></Route>
+
+//       <Route path="/dashboard" element={<DashboardLayout />}>
+//         <Route index element={<h2>Dashboard Home</h2>} />  {/* default when visiting /dashboard */}
+//         <Route path="about" element={<About />} />
+//         <Route path="contact" element={<Contact />} />
+//         <Route path="*" element={<h2>Not found</h2>} />
+//         {/*
+//           /dashboard
+//           /dashboard/about
+//           /dashboard/contact
+//           /dashboard/*
+//           */}
+//       </Route>
+//     </Routes>
+//     // <LoginButton />
+//   )
+// }
+
+// export default App
+
 import { Routes, Route } from 'react-router-dom'
-import Navbar from './Navbar'
-import LoginButton from './LoginButton'
+import RootLayout from './layout/RootLayout'
+import Home from './pages/Home'
+import About from './pages/About'
 import PostsList from './pages/PostsList'
 import PostDetail from './pages/PostDetail'
-import ProductsPage from './pages/ProductsPage'
-
-function Home() {
-  return <h2>Home Page</h2>
-}
-
-function About() {
-  return <h2>About Us</h2>
-}
-
-function Contact() {
-  return <h2>Contact Page</h2>
-}
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
-
-    // {/* <h1>My Website</h1>
-    // <Navbar />
     <Routes>
-      <Route path="/" element={<Home />} />
-      {/* <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} /> */}
-      <Route path="/posts" element={<PostsList />} />
-      <Route path="/posts/:postId" element={<PostDetail />} />
-      <Route path='/productspage' element={<ProductsPage />}></Route> 
+      <Route path="/" element={<RootLayout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="posts" element={<PostsList />} />
+        <Route path="posts/:postId" element={<PostDetail />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
     </Routes>
-    // <LoginButton />
   )
 }
-
 export default App
