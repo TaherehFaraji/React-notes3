@@ -8,34 +8,36 @@
 // import Counter from './Counter'
 // import ProductList from './ProductList'
 // import CartProvider from "./CartProvider";
+import LoginForm from "./LoginForm"
+import SubscribeForm from "./SubscribeForm"
+import ContactForm from "./ContactForm"
+import Form from "./Form"
 
-// function App() {
-//   const items = [
-//     'Apple',
-//     'Banana',
-//     'Orange',
-//     'Mango',
-//     'Grape'
-//   ]
+function App() {
+  // const items = [
+  //   'Apple',
+  //   'Banana',
+  //   'Orange',
+  //   'Mango',
+  //   'Grape'
+  // ]
 
-//   return (
-//     <TodoProvider>
-//       <div className="todo-container">
-//         <h1>Todo List</h1>
-//         <AddTodo />
-//         <TodoList />
-//         <TodoFooter />
-//       </div>
-//     </TodoProvider>
-//     // <ExpensiveChild />
-//     // <Counter />
-//     // < SortedList items={items} />
-//     // <CartProvider>
-//     //   <ProductList />
-//     // </CartProvider>
-//   )
-// }
-// export default App
+  return (
+    <>
+    <Form />
+      {/* <LoginForm /> */}
+      {/* <SubscribeForm /> */}
+      {/* <ContactForm /> */}
+      {/* <ExpensiveChild />
+      <Counter />
+      < SortedList items={items} />
+      <CartProvider>
+      <ProductList />
+      </CartProvider> */}
+    </>
+  )
+}
+export default App
 
 
 // import { Routes, Route } from 'react-router-dom'
@@ -90,25 +92,25 @@
 
 // export default App
 
-import { Routes, Route } from 'react-router-dom'
-import RootLayout from './layout/RootLayout'
-import Home from './pages/Home'
-import About from './pages/About'
-import PostsList from './pages/PostsList'
-import PostDetail from './pages/PostDetail'
-import NotFound from './pages/NotFound'
+// import { Routes, Route } from 'react-router-dom'
+// import RootLayout from './layout/RootLayout'
+// import Home from './pages/Home'
+// import About from './pages/About'
+// import PostsList from './pages/PostsList'
+// import PostDetail from './pages/PostDetail'
+// import NotFound from './pages/NotFound'
 
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<RootLayout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="posts" element={<PostsList />} />
-        <Route path="posts/:postId" element={<PostDetail />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
-  )
-}
-export default App
+// function App() {
+//   return (
+//     <Routes>
+//       <Route path="/" element={<RootLayout />}>
+//         <Route index element={<Home />} />
+//         <Route path="about" element={<About />} />
+//         <Route path="posts" element={<PostsList />} />
+//         <Route path="posts/:postId" element={<PostDetail />} />
+//         <Route path="*" element={<NotFound />} />
+//       </Route>
+//     </Routes>
+//   )
+// }
+// export default App
