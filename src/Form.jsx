@@ -1,12 +1,15 @@
 import { useFormStatus } from "react-dom";
 
 function SubmitButton() {
-    const { pending } = useFormStatus()
+    const { pending, data } = useFormStatus()
 
     return (
-        <button type="submit" disabled={pending}>
-            {pending ? 'Submitting...' : 'Submit'}
-        </button>
+        <div>
+            <button type="submit" disabled={pending}>
+                {pending ? 'Submitting...' : 'Submit'}
+            </button>
+            {pending && data && <p>Saving: {data.get('username')}</p>}
+        </div>
     )
 }
 
@@ -16,10 +19,10 @@ function Form() {
         alert('Done!')
     }
 
-    return(
+    return (
         <form action={slowAction}>
             <input type="text" name="username" required />
-            <SubmitButton /> 
+            <SubmitButton />
         </form>
     )
 }

@@ -12,6 +12,8 @@ import LoginForm from "./LoginForm"
 import SubscribeForm from "./SubscribeForm"
 import ContactForm from "./ContactForm"
 import Form from "./Form"
+import FeedbackForm from "./FeedbackForm"
+import LoginForm2 from "./LoginForm2"
 
 function App() {
   // const items = [
@@ -25,6 +27,8 @@ function App() {
   return (
     <>
     <Form />
+    <FeedbackForm />
+    <LoginForm2 />
       {/* <LoginForm /> */}
       {/* <SubscribeForm /> */}
       {/* <ContactForm /> */}
