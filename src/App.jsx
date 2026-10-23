@@ -14,34 +14,36 @@
 // import Form from "./Form"
 // import FeedbackForm from "./FeedbackForm"
 // import LoginForm2 from "./LoginForm2"
+import Comment from "./Comment"
 
-// function App() {
-//   // const items = [
-//   //   'Apple',
-//   //   'Banana',
-//   //   'Orange',
-//   //   'Mango',
-//   //   'Grape'
-//   // ]
+function App() {
+  // const items = [
+  //   'Apple',
+  //   'Banana',
+  //   'Orange',
+  //   'Mango',
+  //   'Grape'
+  // ]
 
-//   return (
-//     <>
-//     <Form />
-//     <FeedbackForm />
-//     <LoginForm2 />
-//       {/* <LoginForm /> */}
-//       {/* <SubscribeForm /> */}
-//       {/* <ContactForm /> */}
-//       {/* <ExpensiveChild />
-//       <Counter />
-//       < SortedList items={items} />
-//       <CartProvider>
-//       <ProductList />
-//       </CartProvider> */}
-//     </>
-//   )
-// }
-// export default App
+  return (
+    <>
+    {/* <Form />
+    <FeedbackForm />
+    <LoginForm2 /> */}
+    <Comment />
+      {/* <LoginForm /> */}
+      {/* <SubscribeForm /> */}
+      {/* <ContactForm /> */}
+      {/* <ExpensiveChild />
+      <Counter />
+      < SortedList items={items} />
+      <CartProvider>
+      <ProductList />
+      </CartProvider> */}
+    </>
+  )
+}
+export default App
 
 
 // import { Routes, Route } from 'react-router-dom'
@@ -119,21 +121,21 @@
 // }
 // export default App
 
-import { Suspense, useState } from "react";
-import Post from "./Post";
+// import { Suspense, useState } from "react";
+// import Post from "./Post";
 
-function App(){
-  const [postId, setPostId] = useState(1)
+// function App(){
+//   const [postId, setPostId] = useState(1)
 
-  return(
-    <div>
-      <button onClick={()=> setPostId(1)}>Post 1</button>
-      <button onClick={()=> setPostId(2)}>Post 2</button>
-      <Suspense fallback={<p>Loading post ..</p>}>
-      <Post postId={postId} />
-      </Suspense>
-    </div>
-  )
-}
+//   return(
+//     <div>
+//       <button onClick={()=> setPostId(1)}>Post 1</button>
+//       <button onClick={()=> setPostId(2)}>Post 2</button>
+//       <Suspense fallback={<p>Loading post ..</p>}>
+//       <Post postId={postId} />
+//       </Suspense>
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
